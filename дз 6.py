@@ -18,10 +18,8 @@ data = {10: 2, 2: 5, "123": 4, 18: 0, 8: 4}
 
 for key in data:
     try:
-        # Спроба конвертувати ключ у число
         num_key = float(key) if isinstance(key, str) and key.isdigit() else key
         
-        # Перевірка типів
         if not isinstance(num_key, (int, float)) or not isinstance(data[key], (int, float)):
             raise TypeError("Ключ або значення не є числом")
             
